@@ -1,0 +1,145 @@
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  --success-color: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    text-align: center;
+}
+header h2 {
+    font-size: 2.5rem;
+    color: var(--Gray);
+    font-weight: 100;
+}
+header span {
+    color: var(--Very-Dark-Blue);
+}
+
+.ping span {
+    color: var(--Blue);
+}
+
+header p {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+}
+form button {
+    background-color: var(--Blue);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    width: 20%;
+    height: 3.5rem;
+}
+
+.submit.succes {
+    background-color: var(--success-color);
+    height: 3rem;
+    transition: ease-in-out .5s ;
+}
+
+.submit.error {
+    background-color: #ff0000;
+    color: #fff;
+    transition: ease-in-out .3s ;
+}
+.email {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--Gray);
+    font-size: 1.5rem;
+}
+form input:focus {
+    outline: 0;
+}
+.form-control.error input{
+    border-color: var(--Light-Red);
+}
+.form-control.succes input{
+    border-color: var(--success-color);
+}
+.form-control.error small{
+    visibility: visible;
+}
+.form-control small {
+    color: var(--Light-Red);
+    display: block;
+    margin-left: 14rem;
+    text-align: start;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+  
+.img-content {
+    padding: 0 20%;
+    margin-top: 5rem;
+}
+.img-content img{
+    width: 100%;
+    height: auto;
+}
+:is(.bi-facebook, .bi-instagram, .bi-twitter) {
+    background-color: #fff; 
+    color: var(--Blue);
+    border-radius: 100%;
+    padding: .5rem .6rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: .1rem solid var(--Gray);
+    margin-left: 1rem;
+  
+}
+
+:is(.bi-facebook, .bi-instagram, .bi-twitter):hover {
+    background-color:var(--Blue); 
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+
+.icon {
+    margin:5rem 0 2rem 0 ;
+    text-align: center;
+}
+footer p {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .form-control {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        gap: .5rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+    form button{
+        width: auto;
+    }
+    .email {
+        width: auto;
+    }
+    .form-control small {
+        grid-row: 2;
+        text-align: center;
+        margin: 0;
+    }
+}
